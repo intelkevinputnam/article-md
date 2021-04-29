@@ -1,23 +1,17 @@
-Optane Performance Measurement BKM
-##################################
+# Optane Performance Measurement BKM
 
-.. contents::
-   :local:
-
-System Configuration
-********************
+## System Configuration
 
 * Ubuntu 16.04.2 LTS (GN!SSHcat cpuU/Linux 4.4.0-21-generic x86_64)
 * Ubuntu 16.10 (kernel: 4.8.0-22-generic)
 * Intel(R) Xeon(R) CPU E5-2699 v4 @ 2.20GHz
 
-.. admonition:: Revision
+Revision :
 
    Revised 2/25/2017 (Frank Ober, tested on Ubuntu 16.10 and tested several
    reboot cycles)
 
-Contributors
-************
+## Contributors
 
 * Kevin Putnam kevin.putnam@intel.com
 * Puneeth Ramesh puneeth.ramesh@intel.com
@@ -25,8 +19,7 @@ Contributors
 * Otto Bruggeman otto.g.bruggeman@intel.com
 * Jake Fiebing jake.fiebing@intel.com
 
-BKM Steps
-*********
+## BKM Steps
 
 1. **apt-get install fio**
 
@@ -36,23 +29,23 @@ BKM Steps
 2. **Set CPU Governor to Performance: (requires package cpufrequtils to
    be installed first)**
 
-   .. code-block:: bash
-
+   ```
       sudo apt install cpufrequtils
+   ```
 
    (or yum for CentOS/RH, or zypper for SUSE)
 
    Change the GOVERNOR variable in /etc/init.d/cpufrequtils
 
-   -  Modify GOVERNOR="xxxxxxxxxx" with GOVERNOR=”performance”
+   -  Modify GOVERNOR="xxxxxxxxxx" with GOVERNOR="performance"
 
    -  Create a file /etc/default/cpufrequtils
 
    -  Add 1 line:
 
-      .. code-block::
-
-         GOVERNOR=”performance”
+      ```
+         GOVERNOR="performance"
+      ```
 
    -  If you system has ondemand service installed you will want to disable
       this:
@@ -65,9 +58,9 @@ BKM Steps
 
       -  cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 
-      -  Can change “cpu0” to “cpuX” where X = any cpu core number
+      -  Can change "cpu0" to "cpuX" where X = any cpu core number
 
-      -  The cat command should return “performance’
+      -  The cat command should return "performance’
 
    -  Other options to set it for one time testing:
 
@@ -84,7 +77,7 @@ BKM Steps
 3. **Disabled the IRQ Balancing Service (do this before setting the
    affinity)**
 
-   Changed enabled to “0” in /etc/default/irqbalance to turn off the irq
+   Changed enabled to "0" in /etc/default/irqbalance to turn off the irq
    balancer.
 
    Screenshot of changed file below
@@ -103,8 +96,7 @@ BKM Steps
    affinity hint this should boost performance, and be aware this script
    will map interrupts for all NVMe devices.
 
-   .. code-block:: bash
-
+   ```
       #!/bin/bash
 
       folders=/proc/irq/*;
@@ -130,11 +122,12 @@ BKM Steps
       done
 
       done
+   ```
 
 5. **Disable udev service - will eliminate max latency issues shown by
    fio**
 
-   .. important::
+   important:
 
       Re-enable the udev service before rebooting the
       system, otherwise the system will boot into emergency mode. Only use
@@ -160,22 +153,12 @@ BKM Steps
 
 Changes made to ``/etc/init.d/ondemand``
 
-|image0|
+![changes made to /etc/init.d/ondemand](image1.png)
 
 BIOS Settings for CPU Power and Performance Policy:
 
-|image1|
+![BIOS seettings](image2.png)
 
 Change to ``/etc/default/irqbalance``
 
-|image2|
-
-.. |image0| image:: image1.png
-   :width: 5.77358in
-   :height: 8.31858in
-.. |image1| image:: image2.png
-   :width: 6.5in
-   :height: 1.43403in
-.. |image2| image:: image3.png
-   :width: 5.08333in
-   :height: 1.42708in
+![change to /etc/default/irqbalance](image3.png)
