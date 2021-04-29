@@ -37,7 +37,7 @@ Revision :
 
    Change the GOVERNOR variable in /etc/init.d/cpufrequtils
 
-   -  Modify GOVERNOR="xxxxxxxxxx" with GOVERNOR="performance"
+   -  Modify `GOVERNOR="xxxxxxxxxx"` with `GOVERNOR="performance"`
 
    -  Create a file /etc/default/cpufrequtils
 
@@ -60,7 +60,7 @@ Revision :
 
       -  Can change "cpu0" to "cpuX" where X = any cpu core number
 
-      -  The cat command should return "performance’
+      -  The cat command should return "performance"
 
    -  Other options to set it for one time testing:
 
@@ -72,7 +72,7 @@ Revision :
       -  Assuming you have cpufrequitils installed you can run the utility
          one time to set the governor this way.
 
-      -  #cpufreq-set –g performance
+      -  #cpufreq-set -g performance
 
 3. **Disabled the IRQ Balancing Service (do this before setting the
    affinity)**
@@ -92,7 +92,7 @@ Revision :
 
 4. **Set the SMP Affinity Values**
 
-   Execute the following shell script which maps the used irq’s to the
+   Execute the following shell script which maps the used irq's to the
    affinity hint this should boost performance, and be aware this script
    will map interrupts for all NVMe devices.
 
