@@ -1,5 +1,7 @@
 # Optane Performance Measurement BKM
 
+build command: pandoc article.md -o article.html --ascii
+
 ## System Configuration
 
 * Ubuntu 16.04.2 LTS (GN!SSHcat cpuU/Linux 4.4.0-21-generic x86_64)
