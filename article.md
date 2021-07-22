@@ -15,11 +15,11 @@ Revision :
 
 ## Contributors
 
-* Kevin Putnam kevin.putnam@intel.com
-* Puneeth Ramesh puneeth.ramesh@intel.com
-* Frank Ober frank.ober@intel.com
-* Otto Bruggeman otto.g.bruggeman@intel.com
-* Jake Fiebing jake.fiebing@intel.com
+* Kevin Putnam
+* Puneeth Ramesh 
+* Frank Ober 
+* Otto Bruggeman 
+* Jake Fiebing 
 
 ## BKM Steps
 
