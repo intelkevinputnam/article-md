@@ -155,12 +155,12 @@ Revision :
 
 Changes made to ``/etc/init.d/ondemand``
 
-![changes made to /etc/init.d/ondemand](image1.png)
+![changes made to /etc/init.d/ondemand](https://raw.githubusercontent.com/intelkevinputnam/article-md/md/image1.png)
 
 BIOS Settings for CPU Power and Performance Policy:
 
-![BIOS seettings](image2.png)
+![BIOS seettings](https://raw.githubusercontent.com/intelkevinputnam/article-md/md/image2.png)
 
 Change to ``/etc/default/irqbalance``
 
-![change to /etc/default/irqbalance](image3.png)
+![change to /etc/default/irqbalance](https://raw.githubusercontent.com/intelkevinputnam/article-md/md/image3.png)
