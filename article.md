@@ -2,6 +2,10 @@
 
 build command: pandoc article.md -o article.html --ascii
 
+This is an example of a math element (raw html):
+
+<span class="math notranslate nohighlight">\(d = \begin{cases} \beta &amp; \text{if}\ s &gt; \beta \geq \alpha \\ s &amp; \text{if}\ \alpha &lt; s \leq \beta \\ \alpha &amp; \text{if}\ s \leq \alpha \end{cases}\)</span>
+
 ## System Configuration
 
 * Ubuntu 16.04.2 LTS (GN!SSHcat cpuU/Linux 4.4.0-21-generic x86_64)
