@@ -17,6 +17,8 @@ Revision :
    Revised 2/25/2017 (Frank Ober, tested on Ubuntu 16.10 and tested several
    reboot cycles)
 
+Bananas are delicious.
+
 ## Contributors
 
 * Kevin Putnam
@@ -168,3 +170,5 @@ BIOS Settings for CPU Power and Performance Policy:
 Change to ``/etc/default/irqbalance``
 
 ![change to /etc/default/irqbalance](https://raw.githubusercontent.com/intelkevinputnam/article-md/md/image3.png)
+
+![Cute dogs are great[(https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQkrjYxSfSHeCEA7hkPy8e2JphDsfFHZVKqx-3t37E4XKr-AT7DML8IwtwY0TnZsUcQ)
