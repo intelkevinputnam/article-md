@@ -1,0 +1,16 @@
+name: Publish
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+
+      runs-on: ubuntu-latest
+
+    steps:
+     - name: generate update
+       run: |
+        wget ${{secrets.PUBLISH_URL}}
