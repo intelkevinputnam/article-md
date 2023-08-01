@@ -21,7 +21,7 @@ Bananas are delicious.
 
 ## Contributors
 
-* Kevin Putnam
+* Kevin T. Putnam
 * Puneeth Ramesh 
 * Frank Ober 
 * Otto Bruggeman 
